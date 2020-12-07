@@ -1,6 +1,6 @@
 
 # Webkomponent: m-tid
-Inline element som viser klient dato og klokkeslet.
+HTML inline element som viser aktuelle klient dato og klokkeslet.
 
 # Attributter
 

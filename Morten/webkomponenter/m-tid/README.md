@@ -1,5 +1,5 @@
 
-# Webkomponent: <m-tid>
+# Webkomponent: m-tid
 Inline element som viser klient dato og klokkeslet.
 
 # Attributter

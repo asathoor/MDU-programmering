@@ -49,18 +49,24 @@
         attributeChangedCallback(name, oldValue, newValue) {
             console.log("Tidselement attribut " + name + " ændret fra " + oldValue + " til " + newValue + ".");
         }
-        
+
         set format(value) {
-             this.setAttribute("format", value);
+            this.setAttribute("format", value);
         }
 
         get format() {
             if (this.hasAttribute("format")) {
-                return this.getAttribute("format").toLowerCase();
-            } else {
-                this.format = "kort";
-                return "kort"; /* default */
+                const ATTRIBUTLISTE = ["kort", "lang"];
+                const ATTRIBUTVAERDI = this.getAttribute("format").toLowerCase();
+                if (ATTRIBUTLISTE.includes(ATTRIBUTVAERDI)) {
+                    return this.getAttribute("format").toLowerCase();
+                }
             }
+
+            /* default */
+            console.log("Tidselement attribut sat til default.");
+            this.format = "kort";
+            return "kort";
         }
 
         updateStyle() {

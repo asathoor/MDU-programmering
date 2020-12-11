@@ -22,5 +22,5 @@ Kort format
 7.12.2020 02:57:52
 ```
 
-#CSS Styling
+# CSS Styling
 Styling sker direkte på elementet via CSS klassen "m-tid" i CSS dokumentet "m-tid.css".

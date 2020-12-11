@@ -7,16 +7,18 @@
     const TEMPLATE = document.createElement("template");
     const TEMPLATECONTENT = `
     <style>
-        @import url("m-tid.css");
+        @import url("m-postnrogby.css");
     </style>
 
-    <span id="tidspunkt" class="m-tid"></span>
+    <label for="postnr">Postnr.:&nbsp;</label><input type="text" id="postnr" required> 
 
 `;
     TEMPLATE.innerHTML = TEMPLATECONTENT;
-    class Tid extends HTMLElement {
 
-        /* Registrerer om m-tids attribut bredde */
+
+    class Postnrogby extends HTMLElement {
+
+        /* Registrerer om wrapper attribut bredde */
         /* ændrer sig. */
         static get observedAttributes() {
             return ["format"];
@@ -28,10 +30,10 @@
                 mode: 'open'
             });
             this.shadowRoot.appendChild(TEMPLATE.content.cloneNode(true));
-            const ELEM = this.shadowRoot.getElementById("tidspunkt");
-            this.updateTid(ELEM);
-            setInterval(function () {this.updateTid(ELEM);}.bind(this), 1000);
-            console.log("Tidselement er aktivt.");
+            const ELEM = this.shadowRoot.getElementById("postnr");
+            // console.log(ELEM.parentElement);
+            console.log(document.getElementsByTagName("m-postnrogby")[0].parentElement);
+            // console.log(ELEM.parentNode.id);
         }
 
         connectedCallback() {
@@ -64,25 +66,15 @@
 
         updateStyle() {
             const SHADOW = this.shadowRoot;
-            if (this.format === "lang") {
-                SHADOW.querySelector('style').insertAdjacentText('beforeend', ".kort {display: none;}");
+            if (this.format === "lang") {           
+                SHADOW.querySelector('style').insertAdjacentText('beforeend',".kort {display: none;}");               
             } else {
-                SHADOW.querySelector('style').insertAdjacentText('beforeend', ".lang {display: none;}");
+                SHADOW.querySelector('style').insertAdjacentText('beforeend',".lang {display: none;}");       
             }
-        }
-        
-        updateTid(ELEM) {
-            const DATOTID = new Date();
-            const UGEDAGE = ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"];
-            const MAANEDER = ["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"];
-            const LANGDATO = UGEDAGE[DATOTID.getDay()] + "&nbsp;" + DATOTID.getDate() + ".&nbsp;" + MAANEDER[DATOTID.getMonth()] + "&nbsp;" + DATOTID.getFullYear() + "&nbsp;";
-            const KORTDATO = DATOTID.getDate() + "." + (DATOTID.getMonth() + 1) + "." + DATOTID.getFullYear() + "&nbsp;";
-            const KLOKKESLET = (DATOTID.getHours() < 10 ? '0' : '') + DATOTID.getHours() + ":" + (DATOTID.getMinutes() < 10 ? '0' : '') + DATOTID.getMinutes() + ":" + (DATOTID.getSeconds() < 10 ? '0' : '') + DATOTID.getSeconds();
-            ELEM.innerHTML = '<span class="kort">' + KORTDATO + '</span>' + '<span class="lang">' + LANGDATO + '</span>' + KLOKKESLET;
         }
         ;
     } /* Slut på klasse */
 
-    window.customElements.define('m-tid', Tid);
+    window.customElements.define('m-postnrogby', Postnrogby);
 })();
 

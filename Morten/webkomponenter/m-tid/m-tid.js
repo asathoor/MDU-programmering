@@ -6,9 +6,11 @@
     "use strict";
     const TEMPLATE = document.createElement("template");
     const TEMPLATECONTENT = `
-    <style></style>
+    <style>
+        @import url("m-tid.css");
+    </style>
 
-        <span id="tidspunkt"></span>
+    <span id="tidspunkt" class="m-tid"></span>
 
 `;
     TEMPLATE.innerHTML = TEMPLATECONTENT;
@@ -71,16 +73,10 @@
 
         updateStyle() {
             const SHADOW = this.shadowRoot;
-            if (this.format === "lang") {
-                SHADOW.querySelector('style').textContent = `
-                    .kort {
-                        display: none;
-                }`;
+            if (this.format === "lang") {           
+                SHADOW.querySelector('style').insertAdjacentText('beforeend',".kort {display: none;}");               
             } else {
-                SHADOW.querySelector('style').textContent = `
-                    .lang {
-                        display: none;
-                }`;
+                SHADOW.querySelector('style').insertAdjacentText('beforeend',".lang {display: none;}");       
             }
         }
         ;

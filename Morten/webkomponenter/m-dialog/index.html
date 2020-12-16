@@ -17,19 +17,27 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-    <m-dialog status="lukket" HOEJDE="50%" bredde="50%" id="dialog" placering="midte">
-        <div slot="m-dialog-overskrift">Hej Verden</div>
+
+    <m-dialog status="aabnet" hoejde="250px" bredde="100%" placering="top">
+        <div slot="m-dialog-overskrift">Hej Verden 1</div>
         <div slot="m-dialog-indhold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
     </m-dialog>
 
-    <button type="button" id="launch-dialog">Hej</button>
+
+
+    <m-dialog status="lukket" hoejde="400px" bredde="300px" id="dialog" placering="midte">
+        <div slot="m-dialog-overskrift">Hej Verden 2</div>
+        <div slot="m-dialog-indhold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </m-dialog>
+
+    <button type="button" id="aabn-dialog">Åbn dialogboks</button>
 
     <script>
-        const button = document.getElementById('launch-dialog');
-        button.addEventListener('click', () => {
+        const AABNKNAP = document.getElementById('aabn-dialog');
+        AABNKNAP.addEventListener('click', () => {
             document.querySelector('#dialog').setAttribute("status", "aabnet");
         });
-    </script>
+    </script> 
 
     <script src="m-dialog.js"></script>
 </body>

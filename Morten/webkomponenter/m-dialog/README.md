@@ -1,29 +1,40 @@
-# UNDER UDVIKLING
-
-
-
-# Webkomponent: m-tid
-HTML inline element som viser aktuelle klient dato og klokkeslet.
+# Webkomponent: m-dialog
+HTML blok element som viser en dialogboks lukke-knap/kryds.
 
 # Attributter
 
-### format
-Med format attributten angives om datoen skal vises i lang eller kort format. Værdier:
+### status
+Med status-attributten angives om dialogboksen skal vises eller ej:
 
-- kort (default)
-- lang 
+- lukket (default)
+- aabnet
 
-# Eksempler
-Langt format
-```sh
-<m-tid format="lang"></m-tid>
-mandag 7. december 2020 02:56:14
-```
-Kort format
-```sh
-<m-tid format="kort"></m-tid>
-7.12.2020 02:57:52
-```
+ ### placering
+Med placerings-attributten angives dialogboksens placering i browserens viewport:
+
+- top (svarer til CSS left og top = 0)
+- bund (svarer til CSS left og bottom = 0;
+- midte (default)
+
+### hoejde
+Med hoejde-attributten angives dialogboksens højde. Følgende enheder kan bruges:
+
+- px 
+- %
+- em
+- rem
+- vw
+- vh
+
+### bredde
+Med bredde-attributten angives dialogboksens bredde. Følgende enheder kan bruges:
+
+- px 
+- %
+- em
+- rem
+- vw
+- vh
 
 # CSS Styling
-Styling sker direkte på elementet via CSS klassen "m-tid" i CSS dokumentet "m-tid.css".
+Styling sker via CSS klasserne "m-dialog","m-dialog-overskrift" og "m-dialog-indhold" i CSS dokumentet "m-dialog.css".

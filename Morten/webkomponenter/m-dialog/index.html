@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!-- European Union Public License version 1.2 -->
+<!-- https://joinup.ec.europa.eu/sites/default/files/inline-files/EUPL%20v1_2%20DA.txt -->
+<!-- Copyright © 2020 Morten Bonderup  --> 
+
+<html lang="da">
+    <head>
+        <title>m-dialog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    <m-dialog status="lukket" HOEJDE="50%" bredde="50%" id="dialog" placering="midte">
+        <div slot="m-dialog-overskrift">Hej Verden</div>
+        <div slot="m-dialog-indhold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </m-dialog>
+
+    <button type="button" id="launch-dialog">Hej</button>
+
+    <script>
+        const button = document.getElementById('launch-dialog');
+        button.addEventListener('click', () => {
+            document.querySelector('#dialog').setAttribute("status", "aabnet");
+        });
+    </script>
+
+    <script src="m-dialog.js"></script>
+</body>
+
+</html>
+

@@ -55,3 +55,4 @@ Thumbs.db
 !.gitignore
 !.editorconfig
 !.phpcs.xml.dist
+/nbproject/private/

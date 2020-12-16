@@ -1,0 +1,14 @@
+/* European Union Public License version 1.2 */
+/* https://joinup.ec.europa.eu/sites/default/files/inline-files/EUPL%20v1_2%20DA.txt */
+/* Copyright © 2020 Morten Bonderup */ 
+
+.m-tid {
+    display: inline-block;
+    text-align: center;
+    width: 20em;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+}

@@ -13,8 +13,8 @@ fetch('json/persons.json')
   })
   .then(function (jsonData) {
     console.log(jsonData);
-    _familyMembers = jsonData;
-    // todo: call appendPersons(...)
+    _familyMembers = jsonData; // storing my json data in a global variable for later use. 
+    appendPersons(_familyMembers);
   });
 
 /*

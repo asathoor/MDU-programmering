@@ -207,7 +207,8 @@
             if (this.hasAttribute("hoejde")) {
                 const ATTRIBUTLISTE = ["px", "%", "vw", "vh", "em", "rem"];
                 const ATTRIBUTVAERDI = this.getAttribute("hoejde").toLowerCase();
-                const ENHED = ATTRIBUTVAERDI.split(parseInt(ATTRIBUTVAERDI)).toString().replace(/,/g,"");                             const VAERDI = ATTRIBUTVAERDI.split(ENHED).toString().replace(/,/g,"");   
+                const ENHED = ATTRIBUTVAERDI.split(parseInt(ATTRIBUTVAERDI)).toString().replace(/,/g,"");                             
+                const VAERDI = ATTRIBUTVAERDI.split(ENHED).toString().replace(/,/g,"");   
                 if (ATTRIBUTLISTE.includes(ENHED) && VAERDI)  {
                     return this.getAttribute("hoejde").toLowerCase();
                 }  
@@ -238,7 +239,8 @@
             if (this.hasAttribute("bredde")) {
                 const ATTRIBUTLISTE = ["px", "%", "vw", "vh", "em", "rem"];
                 const ATTRIBUTVAERDI = this.getAttribute("bredde").toLowerCase();
-                const ENHED = ATTRIBUTVAERDI.split(parseInt(ATTRIBUTVAERDI)).toString().replace(/,/g,"");                             const VAERDI = ATTRIBUTVAERDI.split(ENHED).toString().replace(/,/g,"");   
+                const ENHED = ATTRIBUTVAERDI.split(parseInt(ATTRIBUTVAERDI)).toString().replace(/,/g,"");                             
+                const VAERDI = ATTRIBUTVAERDI.split(ENHED).toString().replace(/,/g,"");   
                 if (ATTRIBUTLISTE.includes(ENHED) && VAERDI) {
                     return this.getAttribute("bredde").toLowerCase();
                 }  

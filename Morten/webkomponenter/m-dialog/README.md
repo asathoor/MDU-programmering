@@ -1,5 +1,5 @@
 # Webkomponent: m-dialog
-HTML blok element som viser en dialogboks lukke-knap/kryds.
+HTML blok element som viser en dialogboks med lukke-knap/kryds.
 
 # Attributter
 
@@ -13,7 +13,7 @@ Med status-attributten angives om dialogboksen skal vises eller ej:
 Med placerings-attributten angives dialogboksens placering i browserens viewport:
 
 - top (svarer til CSS left og top = 0)
-- bund (svarer til CSS left og bottom = 0;
+- bund (svarer til CSS left og bottom = 0)
 - midte (default)
 
 ### hoejde

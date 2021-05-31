@@ -1,3 +1,0 @@
-# Oplæg på faggruppemøder
-
-/ petj
